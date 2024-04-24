@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Form</title>
+</head>
+
+<body>
+    <form id="userForm" method="post">
+        <label for="username">Username:</label>
+        <input type="text" id="username" name="username"><br><br>
+
+        <label for="password">Password:</label>
+        <input type="password" id="password" name="password"><br><br>
+        <input type="checkbox" id="ukr" name="languages" value="Ukrainian"> Ukrainian
+        <input type="checkbox" id="pl" name="languages" value="Polish"> Polish
+        <input type="checkbox" id="en" name="languages" value="English"> English<br><br>
+
+        <input type="submit" value="Submit">
+    </form>
+
+
+    <script>
+        document.getElementById('userForm').addEventListener('submit', function (event) {
+            event.preventDefault(); // Zapobieganie domyślnej akcji formularza
+
+            let username = document.getElementById('username').value;
+            if (username) {
+                // Ustawienie nowego action dla formularza
+                this.action = "/profile/" + encodeURIComponent(username);
+                this.submit(); // Przesłanie formularza z nowym action
+            } else {
+                alert("Proszę wprowadzić nazwę użytkownika.");
+            }
+        });
+    </script>
+
+</body>
+
+</html>

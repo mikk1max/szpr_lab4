@@ -1,0 +1,23 @@
+{
+  "name": "express-serwer",
+  "version": "1.0.0",
+  "description": "Prosta aplikacja serwerowa oparta na szkielecie Express",
+  "main": "node Zad-12/serwer.js",
+  "scripts": {
+    "start": "node Zad-12/serwer.js",
+    "dev": "nodemon Zad-12/serwer.js"
+  },
+  "keywords": [
+    "express",
+    "serwer"
+  ],
+  "author": "Maksym",
+  "license": "ISC",
+  "dependencies": {
+    "express": "^4.18.3",
+    "express-validator": "^7.0.1",
+    "hbs": "^4.2.0",
+    "nodemon": "^3.1.0",
+    "uuid": "^9.0.1"
+  }
+}
